@@ -780,7 +780,14 @@ class Generator(object):
         self.outln('#include <stdio.h>')
         self.outln('')
         self.outln('#include "dispatch_common.h"')
-        self.outln('#include "epoxy/{0}.h"'.format(self.target))
+        # For ANGLE extension targets (e.g. gl_angle_ext, egl_angle_ext),
+        # include the base API header which transitively includes the
+        # generated ANGLE extension header.
+        if self.target.endswith('_angle_ext'):
+            header_target = self.target[:-len('_angle_ext')]
+        else:
+            header_target = self.target
+        self.outln('#include "epoxy/{0}.h"'.format(header_target))
         self.outln('')
         self.outln('#ifdef __GNUC__')
         self.outln('#define EPOXY_NOINLINE __attribute__((noinline))')
