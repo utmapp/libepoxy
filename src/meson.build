@@ -6,7 +6,8 @@ configure_file(output: 'config.h', configuration: conf)
 #   - registry source file
 #   - additional sources
 generated_sources = [
-  [ 'gl_generated_dispatch.c', gl_registry, [ 'dispatch_common.c', 'dispatch_common.h' ] ]
+  [ 'gl_generated_dispatch.c', gl_registry, [ 'dispatch_common.c', 'dispatch_common.h' ] ],
+  [ 'gl_angle_ext_generated_dispatch.c', gl_angle_registry, [] ],
 ]
 
 if build_egl

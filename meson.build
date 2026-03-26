@@ -203,6 +203,7 @@ endif
 gen_dispatch_py = find_program('src/gen_dispatch.py')
 
 gl_registry = files('registry/gl.xml')
+gl_angle_registry = files('registry/gl_angle_ext.xml')
 egl_registry = files('registry/egl.xml')
 egl_angle_registry = files('registry/egl_angle_ext.xml')
 glx_registry = files('registry/glx.xml')

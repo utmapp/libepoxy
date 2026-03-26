@@ -2,6 +2,7 @@ headers = [ 'common.h' ]
 
 # GL is always generated
 generated_headers = [ [ 'gl.h', 'gl_generated.h', gl_registry ] ]
+generated_headers += [ [ 'gl.h', 'gl_angle_ext_generated.h', gl_angle_registry ] ]
 
 if build_egl
   generated_headers += [ [ 'egl.h', 'egl_generated.h', egl_registry ] ]

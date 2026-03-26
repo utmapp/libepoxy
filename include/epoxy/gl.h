@@ -87,6 +87,7 @@
 EPOXY_BEGIN_DECLS
 
 #include "epoxy/gl_generated.h"
+#include "epoxy/gl_angle_ext_generated.h"
 
 EPOXY_PUBLIC bool epoxy_has_gl_extension(const char *extension);
 EPOXY_PUBLIC bool epoxy_is_desktop_gl(void);
